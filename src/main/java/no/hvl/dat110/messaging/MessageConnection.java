@@ -36,7 +36,6 @@ public class MessageConnection {
 		
 		// TODO - START
 		// encapsulate the data contained in the Message and write to the output stream
-		data = new byte[128];
 		data = MessageUtils.encapsulate(message);
 		
 		try {

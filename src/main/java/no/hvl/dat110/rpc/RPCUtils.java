@@ -22,7 +22,9 @@ public class RPCUtils {
 		
 		byte[] payload = null;
 		
-		if(rpcmsg == null || rpcmsg.length <= 1) {
+		if(rpcmsg == null || rpcmsg.length < 1) {
+			System.out.println(rpcmsg.length);
+			
 			throw new IllegalArgumentException("Invalid rpc message");
 		}
 		payload = new byte[rpcmsg.length-1];
